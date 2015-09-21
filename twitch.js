@@ -341,9 +341,8 @@
     };
 
     // If force_verify is passed in the options then pass force_verify along with the params
-    // this will force the user to verify which account they wish to login with.
     if (options.force_verify) {
-      params.force_verify = true;
+      params.force_verify = options.force_verify;
     }
 
     if (!params.client_id) {
