@@ -47,6 +47,16 @@ $('.twitch-connect').click(function() {
   });
 })
 ```
+You can also force the user to verify the account they wish to log in with, this is helpful if the user has multiple accounts.
+
+```javascript
+$('.twitch-connect').click(function() {
+  Twitch.login({
+    scope: ['user_read', 'channel_read'],
+    force_verify: true
+  });
+})
+```
 
 You probably only want to show the button when the user is not logged in, so add this to the callback on Twitch.init:
 
